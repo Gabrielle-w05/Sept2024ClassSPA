@@ -11,7 +11,7 @@ export default state => html`
         <th>Customer</th>
       </tr>
       ${state.pizzas
-      .map(pizza => {
+        .map(pizza => {
           return `<tr><td>${pizza.crust}</td><td>${pizza.cheese}</td><td>${
             pizza.sauce
           }</td><td>${pizza.toppings.join(" & ")}</td><td>${
