@@ -28,7 +28,8 @@ router.hooks({
     switch (view) {
       // Add a case for each view that needs data from an API
       case "home":
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis&units=imperial`).then(response => {
+        axios
+        .get(`https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis&units=imperial`).then(response => {
           console.log("Weather Response Data", response.data);
           store.home.weather = {
             city: response.data.name,
